@@ -1,0 +1,103 @@
+/* Noto Sans Mono */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+
+.noto-sans-mono-regular {
+    font-family: "Noto Sans Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/* Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.inter-bold {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.inter-semi-bold {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.inter-regular {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Header */
+.header__title h1 {
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+.header__title-description {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.header__profiles {gap: 0.5rem;}
+
+.header__profiles a {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 0.125rem;
+    font-size: 1rem;
+    border: 2px solid #000;
+}
+
+/* About me section */
+.about-me {
+    margin-bottom: 1rem;
+}
+
+.about-me__image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.about-me p:nth-child(2) {margin-bottom: 0.5rem;}
+
+/* Project section */
+.project__header-title {margin-bottom: 0.5rem;}
+
+.project__header-underline {
+    width: 4rem;
+    border-bottom: 3px solid #000;
+    margin-bottom: 0.5rem;
+}
+
+.project__list-item {
+    margin: 0.5rem 0;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #b9b4b4;
+}
+
+/* Footer */
+footer {gap: 0.25rem;}
