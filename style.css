@@ -93,9 +93,9 @@ li {
     margin-bottom: 0.5rem;
 }
 
-.project__list-item {
-    margin: 0.5rem 0;
-    padding-bottom: 0.25rem;
+.project__list-item a {
+    display: block;
+    padding: 1rem 0;
     border-bottom: 1px solid #b9b4b4;
 }
 
