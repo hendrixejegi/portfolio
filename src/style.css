@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer base {
+  .full-bleed {
+    @apply col-span-full;
+  }
+}
