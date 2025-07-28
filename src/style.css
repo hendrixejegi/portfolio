@@ -5,6 +5,10 @@
     @apply font-semibold;
   }
 
+  .wrapper {
+    @apply px-2 grid grid-cols-[1fr_min(60rem,_100%)_1fr] *:col-start-2;
+  }
+
   .full-bleed {
     @apply col-span-full;
   }
@@ -12,4 +16,23 @@
   .cta-button {
     @apply border-2 px-2 py-1 flex items-center gap-1 rounded-md font-semibold;
   }
+}
+
+.input-container {
+  @apply flex flex-col w-full gap-2;
+}
+
+/* .input-container label {
+  @apply uppercase;
+} */
+
+.input-container input,
+.input-container textarea {
+  @apply w-full bg-black/50 placeholder:text-neutral-400 px-4 py-2 rounded-lg border-1 border-neutral-700;
+}
+
+textarea {
+  resize: none;
+  field-sizing: content;
+  min-height: 8rem;
 }

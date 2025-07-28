@@ -8,9 +8,9 @@ Alpine.start();
 document.querySelector("#app").innerHTML = `
   <div class="min-h-screen flex flex-col">
     ${Header()}
-    <main class="grow py-12 grid grid-cols-[1fr_min(60rem,_100%)_1fr] *:col-start-2 space-y-12">
+    <main class="grow py-12 wrapper space-y-12">
       <section id="home" class="relative place-content-center place-items-center">
-        <div class="p-2 space-y-8 max-w-2xl py-20">
+        <div class="p-4 space-y-8 max-w-2xl py-20">
           <hgroup>
             <h1 class="text-4xl md:text-5xl font-bold flex flex-col">
               <span>Hi, I'm <span class="text-purple-500">Hendrix✨</span></span>
@@ -38,7 +38,7 @@ document.querySelector("#app").innerHTML = `
         <div class="absolute -z-10 left-4/10 top-1/10 blur-2xl opacity-40 size-50 rounded-full bg-radial-[at_50%_75%] from-sky-200 via-blue-400 to-indigo-900 to-90%" aria-hidden="true"></div>
       </section>
 
-      <section id="about" class="space-y-8 p-2">
+      <section id="about" class="space-y-8 p-4">
         <h2 class="text-3xl font-bold">How Did I Get Here?</h2>
         <div class="flex flex-col lg:items-center lg:flex-row gap-12">
           <div class="space-y-4">
@@ -60,19 +60,19 @@ document.querySelector("#app").innerHTML = `
         </div>
       </section>
 
-      <section id="projects" class="p-2 space-y-8">
+      <section id="projects" class="p-4 space-y-8">
         <h2 class="text-3xl font-bold">What I&apos;m Working On</h2>
         <p class="max-w-lg">I like to stay busy, always building, refining, or learning something new. Here are a few projects I&apos;ve worked on recently.</p>
         <div class="flex gap-4 items-center">
           <div class="md:basis-1/2 space-y-4">
             <h3 class="font-bold text-2xl">My Side Of The Stack</h3>
-            <p> A personal blog where I share what I’m learning, building, and thinking as I grow in frontend development. From code snippets to reflections, it’s all from my side of the stack.</p>
+            <p> A personal blog where I share what I&apos;m learning, building, and thinking as I grow in frontend development. From code snippets to reflections, it&apos;s all from my side of the stack.</p>
             <a href="/project/my-side-of-the-stack">COMING SOON!</a>
           </div>
         </div>
       </section>
 
-      <section id="experience" class="p-2 space-y-8">
+      <section id="experience" class="p-4 space-y-8">
         <h2 class="text-3xl font-bold">Where I&apos;ve Been, What I&apos;ve Learned</h2>
         <p class="max-w-lg">
           I&apos;ve had the chance to apply what I&apos;ve learned in real-world environments, collaborating with teams, shipping features, and growing through feedback. Each experience has sharpened my skills and broadened my perspective on what it takes to build meaningful digital products.
@@ -92,6 +92,40 @@ document.querySelector("#app").innerHTML = `
           </div>
         </div>
       </section>
+
+      <section id="contact" class="full-bleed relative before:absolute before:content-[''] before:inset-[0_0_0_0] before:bg-[url(/67443.jpg)] before:bg-cover before:-z-10 before:opacity-60 p-8 rounded-2xl before:rounded-xl border-1 border-neutral-700/60">
+        <div class="flex items-center gap-8 w-full">
+          <div class="basis-1/2">
+            <hgroup class="space-y-4">
+              <h2 class="text-5xl font-bold">Lets Build Something Together</h2>
+              <p>Have an idea, a project, or just want to say hi? I&apos;m just a message away.</p>
+            </hgroup>
+          </div>
+          <form action="" class="basis-1/2 backdrop-blur-sm border-1 rounded-xl p-8 border-neutral-700/60 bg-black/30 space-y-4">
+            <div class="flex items-center gap-4">
+              <div class="input-container">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Your name">
+              </div>
+              <div class="input-container">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="contact@email.com">
+              </div>
+            </div>
+            <div class="input-container">
+              <label for="subject">Subject</label>
+              <input type="text" name="subject" id="subject" placeholder="What's this about?">
+            </div>
+            <div class="input-container">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" placeholder="Tell me everything"></textarea>
+            </div>
+            <button type="submit" class="font-semibold border-1 border-neutral-700/60 px-4 py-2 rounded-lg bg-black/50 ml-auto block">Send</button>
+          </form>
+        </div>
+      </section>
     </main>
   </div>
 `;
+
+console.log(emailjs);

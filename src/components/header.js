@@ -3,7 +3,7 @@ export default function Header() {
     <header class="flex items-center">
       <div 
         x-data="{open: false}"
-        class="p-2 w-full max-w-[60rem] mx-auto flex items-center justify-between"
+        class="p-4 flex items-center w-full justify-between"
       >
         <div>
           <a href="#home" class="font-bold text-xl text-purple-500">Hendrix Ejegi</a>
@@ -30,6 +30,7 @@ export default function Header() {
           <ul class="flex flex-col lg:flex-row items-center gap-4 mx-auto">
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </nav>
@@ -41,6 +42,7 @@ export default function Header() {
           <ul class="flex flex-col lg:flex-row items-center gap-4 mx-auto">
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </nav>
