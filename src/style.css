@@ -1,7 +1,15 @@
 @import "tailwindcss";
 
 @layer base {
+  .nav-link {
+    @apply font-semibold;
+  }
+
   .full-bleed {
     @apply col-span-full;
+  }
+
+  .cta-button {
+    @apply border-2 px-2 py-1 flex items-center gap-1 rounded-md font-semibold;
   }
 }
