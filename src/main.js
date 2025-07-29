@@ -1,6 +1,7 @@
 import "./style.css";
 import Alpine from "alpinejs";
 import Header from "./components/header";
+import Footer from "./components/footer";
 
 window.Alpine = Alpine;
 Alpine.start();
@@ -8,7 +9,7 @@ Alpine.start();
 document.querySelector("#app").innerHTML = `
   <div class="min-h-screen flex flex-col">
     ${Header()}
-    <main class="grow py-12 wrapper space-y-12">
+    <main class="grow py-12 wrapper space-y-12 border-b-2 border-b-neutral-700  ">
       <section id="home" class="relative place-content-center place-items-center">
         <div class="p-4 space-y-8 max-w-2xl py-20">
           <hgroup>
@@ -23,14 +24,14 @@ document.querySelector("#app").innerHTML = `
           </p>
           <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
             <div class="flex items-center gap-4">
-              <a href="" class="cta-button"><i class="fa-solid fa-at"></i> Contact Me</a>
-              <a href="" class="cta-button"><i class="fa-solid fa-folder-open"></i> View Projects</a>
+              <a href="#contact" class="cta-button"><i class="fa-solid fa-at"></i> Contact Me</a>
+              <a href="#projects" class="cta-button"><i class="fa-solid fa-folder-open"></i> View Projects</a>
             </div>
             <div class="hidden md:block w-0.5 bg-white text-transparent">|</div>
             <div class="flex items-center gap-4">
-              <a href=""><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-              <a href=""><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
-              <a href=""><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+              <a href="https://github.com/hendrixejegi" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/hendrixabugewaejegi/" target="_blank"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+              <a href="https://x.com/codeDriX" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
@@ -55,7 +56,7 @@ document.querySelector("#app").innerHTML = `
           <img
             src="/47c01cb8-29e8-4875-92cd-19b473bb5e4f.jpeg"
             alt=""
-            class="block w-full lg:max-w-[320px] aspect-square md:aspect-video lg:aspect-auto object-cover md:object-[left_18%] lg:object-center"
+            class="block w-full lg:max-w-[400px] aspect-square md:aspect-video lg:aspect-auto object-cover md:object-[left_18%] lg:object-center"
           >
         </div>
       </section>
@@ -65,9 +66,12 @@ document.querySelector("#app").innerHTML = `
         <p class="max-w-lg">I like to stay busy, always building, refining, or learning something new. Here are a few projects I&apos;ve worked on recently.</p>
         <div class="flex gap-4 items-center">
           <div class="md:basis-1/2 space-y-4">
+            <div class="aspect-video w-full max-w-[584px] p-8 bg-purple-200">
+              <img src="/my-side-of-the-stack.png" alt="" class="aspect-video rounded-md shadow-xl shadow-black/60" />
+            </div>
             <h3 class="font-bold text-2xl">My Side Of The Stack</h3>
             <p> A personal blog where I share what I&apos;m learning, building, and thinking as I grow in frontend development. From code snippets to reflections, it&apos;s all from my side of the stack.</p>
-            <a href="/project/my-side-of-the-stack">COMING SOON!</a>
+            <a href="">COMING SOON!</a>
           </div>
         </div>
       </section>
@@ -78,7 +82,7 @@ document.querySelector("#app").innerHTML = `
           I&apos;ve had the chance to apply what I&apos;ve learned in real-world environments, collaborating with teams, shipping features, and growing through feedback. Each experience has sharpened my skills and broadened my perspective on what it takes to build meaningful digital products.
         </p>
         <div>
-          <div class="w-1/2 space-y-4 ml-auto pl-4 relative before:absolute before:top-0 before:left-0 before:content-[''] before:w-0.5 before:bg-white before:h-full before:bg:white">
+          <div class="lg:w-1/2 space-y-4 lg:ml-auto pl-4 relative before:absolute before:top-0 before:left-0 before:content-[''] before:w-0.5 before:bg-white before:h-full before:bg:white">
             <div>
               <div class="font-bold text-lg">Frontend Developer</div>
               <div>Calmify Technologies &middot; Internship</div>
@@ -93,39 +97,54 @@ document.querySelector("#app").innerHTML = `
         </div>
       </section>
 
-      <section id="contact" class="full-bleed relative before:absolute before:content-[''] before:inset-[0_0_0_0] before:bg-[url(/67443.jpg)] before:bg-cover before:-z-10 before:opacity-60 p-8 rounded-2xl before:rounded-xl border-1 border-neutral-700/60">
-        <div class="flex items-center gap-8 w-full">
+      <section id="contact" class="relative before:absolute before:content-[''] before:inset-[0_0_0_0] before:bg-[url(/67443.jpg)] before:bg-cover before:-z-10 before:opacity-60 p-4 lg:p-8 rounded-2xl before:rounded-xl border-1 border-neutral-700/60">
+        <div class="flex flex-col lg:flex-row lg:items-center gap-8 w-full">
           <div class="basis-1/2">
             <hgroup class="space-y-4">
               <h2 class="text-5xl font-bold">Lets Build Something Together</h2>
               <p>Have an idea, a project, or just want to say hi? I&apos;m just a message away.</p>
             </hgroup>
           </div>
-          <form action="" class="basis-1/2 backdrop-blur-sm border-1 rounded-xl p-8 border-neutral-700/60 bg-black/30 space-y-4">
-            <div class="flex items-center gap-4">
+          <form action="" id="contact-form" class="basis-1/2 backdrop-blur-sm border-1 rounded-xl p-4 lg:p-8 border-neutral-700/60 bg-black/30 space-y-4">
+            <div class="flex flex-col md:flex-row items-center gap-4">
               <div class="input-container">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="Your name">
+                <input type="text" name="name" id="name" placeholder="Your name" required />
               </div>
               <div class="input-container">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="contact@email.com">
+                <input type="email" name="email" id="email" placeholder="contact@email.com" required />
               </div>
             </div>
             <div class="input-container">
               <label for="subject">Subject</label>
-              <input type="text" name="subject" id="subject" placeholder="What's this about?">
+              <input type="text" name="subject" id="subject" placeholder="What's this about?" required />
             </div>
             <div class="input-container">
               <label for="message">Message</label>
-              <textarea name="message" id="message" placeholder="Tell me everything"></textarea>
+              <textarea name="message" id="message" placeholder="Tell me everything" required></textarea>
             </div>
-            <button type="submit" class="font-semibold border-1 border-neutral-700/60 px-4 py-2 rounded-lg bg-black/50 ml-auto block">Send</button>
+            <button type="submit" class="cursor-pointer font-semibold border-1 border-neutral-700/60 px-4 py-2 rounded-lg bg-black/50 ml-auto block">Send</button>
           </form>
         </div>
       </section>
     </main>
+    ${Footer()}
   </div>
 `;
 
-console.log(emailjs);
+window.onload = function () {
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      emailjs.sendForm("service_cex169h", "template_27rz2zw", this).then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
+    });
+};
