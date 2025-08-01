@@ -2,33 +2,37 @@ import "./style.css";
 import Alpine from "alpinejs";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 window.Alpine = Alpine;
 Alpine.start();
+
+AOS.init();
 
 document.querySelector("#app").innerHTML = `
   <div class="min-h-screen flex flex-col">
     ${Header()}
     <main class="grow py-12 wrapper space-y-12 border-b-2 border-b-neutral-700  ">
-      <section id="home" class="relative place-content-center place-items-center">
-        <div class="p-4 space-y-8 max-w-2xl py-20">
-          <hgroup>
+      <section id="home" class="relative py-12 lg:py-0 lg:h-[calc(100vh-80px)] place-content-center place-items-center">
+        <div class="p-4 space-y-8 max-w-2xl">
+          <hgroup data-aos="fade-up" data-aos-duration="500">
             <h1 class="text-4xl md:text-5xl font-bold flex flex-col">
               <span>Hi, I'm <span class="text-purple-500">Hendrix✨</span></span>
-              <span>A <span class="text-purple-500">Software Developer</span></span>
+              <span>A <span class="text-purple-500">Software Engineer</span></span>
             </h1>
           </hgroup>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="500">
             I'm an entry-level <b>Frontend Developer</b> with a strong foundation in <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>,
             along with experience in modern tools and frameworks like <b>Tailwind CSS</b>, <b>React</b>, and <b>Next.js</b>.
           </p>
           <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="500">
               <a href="#contact" class="cta-button"><i class="fa-solid fa-at"></i> Contact Me</a>
               <a href="#projects" class="cta-button"><i class="fa-solid fa-folder-open"></i> View Projects</a>
             </div>
-            <div class="hidden md:block w-0.5 bg-white text-transparent">|</div>
-            <div class="flex items-center gap-4">
+            <div class="hidden md:block w-0.5 bg-white text-transparent" data-aos="fade-in" data-aos-delay="1000" data-aos-duration="500">|</div>
+            <div class="flex items-center gap-4" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="500">
               <a href="https://github.com/hendrixejegi" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
               <a href="https://www.linkedin.com/in/hendrixabugewaejegi/" target="_blank"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
               <a href="https://x.com/codeDriX" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
@@ -39,7 +43,7 @@ document.querySelector("#app").innerHTML = `
         <div class="absolute -z-10 left-4/10 top-1/10 blur-2xl opacity-40 size-50 rounded-full bg-radial-[at_50%_75%] from-sky-200 via-blue-400 to-indigo-900 to-90%" aria-hidden="true"></div>
       </section>
 
-      <section id="about" class="space-y-8 p-4">
+      <section id="about" class="space-y-8 p-4" data-aos="fade-up" data-aos-duration="500">
         <h2 class="text-3xl font-bold">How Did I Get Here?</h2>
         <div class="flex flex-col lg:items-center lg:flex-row gap-12">
           <div class="space-y-4">
@@ -50,7 +54,7 @@ document.querySelector("#app").innerHTML = `
               After a while I signed up for the engineering program at AltSchool Africa in 2023 but would defer my admission to the next cohort. I came back around the middle of 2024 and completed the program in 2025.
             </p>
             <p>
-              I&apos;m currently putting my skill to the test as an intern at Calmify Technologies where I work under the leadership and guidance of more experienced technical and non-technical team members. I'm helping them build Natsu, a digital tool to improve mental wellness across Africa. Under Calmify I&apos;m learning what it means to be a team player. The standards of what it means to be a good engineer are being raised beyond limits I imagined pushing me to be better than I was yesterday.
+              I&apos;m currently putting my skill to the test as an intern at Calmify Technologies where I work under the leadership and guidance of more experienced technical and non-technical team members. I'm helping them build <b>Natsu</b>, a digital tool to improve mental wellness across Africa. Under Calmify I&apos;m learning what it means to be a team player. The standards of what it means to be a good engineer are being raised beyond limits I imagined, pushing me to be better than I was yesterday.
             </p>
           </div>
           <img
@@ -61,7 +65,7 @@ document.querySelector("#app").innerHTML = `
         </div>
       </section>
 
-      <section id="projects" class="p-4 space-y-8">
+      <section id="projects" class="p-4 space-y-8" data-aos="fade-up" data-aos-duration="500">
         <h2 class="text-3xl font-bold">What I&apos;m Working On</h2>
         <p class="max-w-lg">I like to stay busy, always building, refining, or learning something new. Here are a few projects I&apos;ve worked on recently.</p>
         <div class="flex gap-4 items-center">
@@ -76,7 +80,7 @@ document.querySelector("#app").innerHTML = `
         </div>
       </section>
 
-      <section id="experience" class="p-4 space-y-8">
+      <section id="experience" class="p-4 space-y-8" data-aos="fade-up" data-aos-duration="500">
         <h2 class="text-3xl font-bold">Where I&apos;ve Been, What I&apos;ve Learned</h2>
         <p class="max-w-lg">
           I&apos;ve had the chance to apply what I&apos;ve learned in real-world environments, collaborating with teams, shipping features, and growing through feedback. Each experience has sharpened my skills and broadened my perspective on what it takes to build meaningful digital products.
@@ -97,7 +101,7 @@ document.querySelector("#app").innerHTML = `
         </div>
       </section>
 
-      <section id="contact" class="relative before:absolute before:content-[''] before:inset-[0_0_0_0] before:bg-[url(/67443.jpg)] before:bg-cover before:-z-10 before:opacity-60 p-4 lg:p-8 rounded-2xl before:rounded-xl border-1 border-neutral-700/60">
+      <section id="contact" class="relative before:absolute before:content-[''] before:inset-[0_0_0_0] before:bg-[url(/67443.jpg)] before:bg-cover before:-z-10 before:opacity-60 p-4 lg:p-8 rounded-2xl before:rounded-xl border-1 border-neutral-700/60" data-aos="fade-up" data-aos-duration="500">
         <div class="flex flex-col lg:flex-row lg:items-center gap-8 w-full">
           <div class="basis-1/2">
             <hgroup class="space-y-4">
