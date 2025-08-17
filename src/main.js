@@ -19,12 +19,11 @@ document.querySelector("#app").innerHTML = `
           <hgroup data-aos="fade-up" data-aos-duration="500">
             <h1 class="text-4xl md:text-5xl font-bold flex flex-col">
               <span>Hi, I'm <span class="text-purple-500">Hendrix✨</span></span>
-              <span>A <span class="text-purple-500">Software Engineer</span></span>
+              <span>A <span class="text-purple-500">Frontend Developer</span></span>
             </h1>
           </hgroup>
           <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="500">
-            I'm an entry-level <b>Frontend Developer</b> with a strong foundation in <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>,
-            along with experience in modern tools and frameworks like <b>Tailwind CSS</b>, <b>React</b>, and <b>Next.js</b>.
+            After giving Spanish a shot and not quite hitting the mark, I decided to try my hand at some other languages—this time, I went for <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>! Building that foundation has opened up exciting possibilities for me, and now I’m exploring modern frameworks and libraries like <b>React</b>, <b>Tailwind CSS</b>, and <b>Next.js</b>. It's been a fun journey!
           </p>
           <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
             <div class="flex items-center gap-4" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="500">
@@ -44,14 +43,14 @@ document.querySelector("#app").innerHTML = `
       </section>
 
       <section id="about" class="space-y-8 p-4" data-aos="fade-up" data-aos-duration="500">
-        <h2 class="text-3xl font-bold">How Did I Get Here?</h2>
+        <h2 class="text-3xl font-bold">What's My Reason?</h2>
         <div class="flex flex-col lg:items-center lg:flex-row gap-12">
           <div class="space-y-4">
             <p>
-              In 2022, I made the difficult decision to step away from a Mechanical Engineering degree after three years of study. I had developed an interest in software engineering when I was 16 and fresh out of High school but never got the chance to explore it so when I dropped out, I didn't waste a second.
+              To put it simply, I enjoy the thrill of discovering new things.
             </p>
             <p>
-              After a while I signed up for the engineering program at AltSchool Africa in 2023 but would defer my admission to the next cohort. I came back around the middle of 2024 and completed the program in 2025.
+              The hunger for knowledge is always nurtured when I take on new challenges. As I grow into an adept web developer, I have had opportunities to apply what I learn in creative ways, providing solutions to problems based on my understanding of the skills. An experience that never stops growing. The challenges I encounter consistently highlight areas for improvement, and I embrace them as opportunities to enhance my skills. This is a cycle I appreciate: learning, applying, and receiving feedback.
             </p>
             <p>
               I&apos;m currently putting my skill to the test as an intern at Calmify Technologies where I work under the leadership and guidance of more experienced technical and non-technical team members. I'm helping them build <b>Natsu</b>, a digital tool to improve mental wellness across Africa. Under Calmify I&apos;m learning what it means to be a team player. The standards of what it means to be a good engineer are being raised beyond limits I imagined, pushing me to be better than I was yesterday.
